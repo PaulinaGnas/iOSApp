@@ -12,7 +12,7 @@ struct ListsView: View {
     @FetchRequest(sortDescriptors: [SortDescriptor(\.listName)]) private var listy: FetchedResults<ShopList>
     @State var showAlert = false
     
-    var dupa = "Duap"
+    var dupa = "Duapa"
  
     var body: some View {
         NavigationStack {
