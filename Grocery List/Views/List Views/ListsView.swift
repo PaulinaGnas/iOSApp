@@ -11,6 +11,8 @@ struct ListsView: View {
     @StateObject private var viewModel = ListsViewModel()
     @FetchRequest(sortDescriptors: [SortDescriptor(\.listName)]) private var listy: FetchedResults<ShopList>
     @State var showAlert = false
+    
+    var dupa = "Duap"
  
     var body: some View {
         NavigationStack {
