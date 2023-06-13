@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="21513" systemVersion="21G646" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
+    <entity name="ShopList" representedClassName="ShopList" syncable="YES">
+        <attribute name="checkProduct" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES"/>
+        <attribute name="id" optional="YES" attributeType="UUID" usesScalarValueType="NO"/>
+        <attribute name="listName" attributeType="String"/>
+        <relationship name="products" optional="YES" toMany="YES" deletionRule="Cascade" destinationEntity="ShopProduct" inverseName="originList" inverseEntity="ShopProduct"/>
+    </entity>
+    <entity name="ShopProduct" representedClassName="ShopProduct" syncable="YES">
+        <attribute name="amount" optional="YES" attributeType="String"/>
+        <attribute name="choosenUnit" optional="YES" attributeType="String"/>
+        <attribute name="completion" optional="YES" attributeType="Boolean" usesScalarValueType="YES"/>
+        <attribute name="id" attributeType="UUID" usesScalarValueType="NO"/>
+        <attribute name="image" optional="YES" attributeType="String"/>
+        <attribute name="name" attributeType="String"/>
+        <relationship name="originList" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="ShopList" inverseName="products" inverseEntity="ShopList"/>
+    </entity>
+    <entity name="Theme" representedClassName="Theme" syncable="YES">
+        <attribute name="colorBottomAlpha" optional="YES" attributeType="Float" defaultValueString="0.0" usesScalarValueType="YES"/>
+        <attribute name="colorBottomBlue" optional="YES" attributeType="Float" defaultValueString="0.0" usesScalarValueType="YES"/>
+        <attribute name="colorBottomGreen" optional="YES" attributeType="Float" defaultValueString="0.0" usesScalarValueType="YES"/>
+        <attribute name="colorBottomRed" optional="YES" attributeType="Float" defaultValueString="0.0" usesScalarValueType="YES"/>
+        <attribute name="colorTopAlpha" optional="YES" attributeType="Float" defaultValueString="0.0" usesScalarValueType="YES"/>
+        <attribute name="colorTopBlue" optional="YES" attributeType="Float" defaultValueString="0.0" usesScalarValueType="YES"/>
+        <attribute name="colorTopGreen" optional="YES" attributeType="Float" defaultValueString="0.0" usesScalarValueType="YES"/>
+        <attribute name="colorTopRed" optional="YES" attributeType="Float" defaultValueString="0.0" usesScalarValueType="YES"/>
+    </entity>
+    <entity name="UserIngredient" representedClassName="UserIngredient" syncable="YES">
+        <attribute name="id" optional="YES" attributeType="UUID" usesScalarValueType="NO"/>
+        <attribute name="image" optional="YES" attributeType="String"/>
+        <attribute name="name" optional="YES" attributeType="String"/>
+        <attribute name="quantity" optional="YES" attributeType="String"/>
+        <attribute name="unit" optional="YES" attributeType="String"/>
+        <relationship name="parentRecipe" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="UserRecipe" inverseName="listOfIngredients" inverseEntity="UserRecipe"/>
+    </entity>
+    <entity name="UserRecipe" representedClassName="UserRecipe" syncable="YES">
+        <attribute name="id" attributeType="UUID" usesScalarValueType="NO"/>
+        <attribute name="image" optional="YES" attributeType="Binary"/>
+        <attribute name="instructions" optional="YES" attributeType="String"/>
+        <attribute name="note" optional="YES" attributeType="String"/>
+        <attribute name="preparationTime" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES"/>
+        <attribute name="rating" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES"/>
+        <attribute name="recipeName" attributeType="String"/>
+        <attribute name="serves" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES"/>
+        <relationship name="listOfIngredients" optional="YES" toMany="YES" deletionRule="Cascade" destinationEntity="UserIngredient" inverseName="parentRecipe" inverseEntity="UserIngredient"/>
+    </entity>
+</model>

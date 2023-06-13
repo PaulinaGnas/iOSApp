@@ -1,0 +1,650 @@
+[
+    {
+      "section" : "Fruits",
+      "products" : [
+          {
+              "name" : "Apple",
+              "image" : "apple"
+          },
+          {
+              "name" : "Apricot",
+              "image" : "apricot"
+          },
+          {
+              "name" : "Banana",
+              "image" : "banana"
+          },
+          {
+              "name" : "Blueberry",
+              "image": "blueberry"
+          },
+          {
+              "name" : "Cherry",
+              "image" : "cherry"
+          },
+          {
+              "name" : "Dragon Fruit",
+              "image" : "dragon-fruit"
+          },
+          {
+              "name" : "Durian",
+              "image" : "durian"
+          },
+          {
+              "name" : "Grapes",
+              "image" : "grapes"
+          },
+          {
+              "name" : "Jackfruit",
+              "image" : "jackfruit"
+          },
+          {
+              "name" : "Kiwi",
+              "image" : "kiwi"
+          },
+          {
+              "name" : "Lemon",
+              "image" : "citrus"
+          },
+          {
+              "name" : "Lime",
+              "image" : "lime"
+          },
+          {
+              "name" : "Lychee",
+              "image" : "lychee"
+          },
+          {
+              "name" : "Mango",
+              "image" : "mango"
+          },
+          {
+              "name" : "Melon",
+              "image" : "melon"
+          },
+          {
+              "name" : "Orange",
+              "image" : "orange"
+          },
+          {
+              "name" : "Papaya",
+              "image" : "papaya"
+          },
+          {
+              "name" : "Peach",
+              "image" : "peach"
+          },
+          {
+              "name" : "Pear",
+              "image" : "pear"
+          },
+          {
+              "name" : "Pineapple",
+              "image" : "pineapple"
+          },
+          {
+              "name" : "Plum",
+              "image" : "plum"
+          },
+          {
+              "name" : "Pomegranate",
+              "image" : "pomegranate"
+          },
+          {
+              "name" : "Raspberry",
+              "image" : "raspberry"
+          },
+          {
+              "name" : "Strawberry",
+              "image" : "strawberry"
+          },
+          {
+              "name" : "Watermelon",
+              "image" : "watermelon"
+          }
+      ]
+    },
+    {
+        "section" : "Vegetables",
+        "products" : [
+        {
+            "name" : "Artichoke",
+            "image" : "artichoke"
+        },
+        {
+            "name" : "Asparagus",
+            "image" : "asparagus"
+        },
+        {
+            "name" : "Avocado",
+            "image" : "avocado"
+        },
+        {
+            "name" : "Beet",
+            "image" : "beet"
+        },
+        {
+            "name" : "Bok Choy",
+            "image" : "bok-choy"
+        },
+        {
+            "name" : "Broccoli",
+            "image" : "broccoli"
+        },
+        {
+            "name" : "Carrot",
+            "image" : "carrot"
+        },
+        {
+            "name" : "Cauliflower",
+            "image" : "cauliflower"
+        },
+        {
+            "name" : "Celery",
+            "image" : "celery"
+        },
+        {
+            "name" : "Chard",
+            "image" : "chard"
+        },
+        {
+            "name" : "Chili Pepper",
+            "image" : "chili-pepper"
+        },
+        {
+            "name" : "Corn",
+            "image" : "corn"
+        },
+        {
+            "name" : "Cucumber",
+            "image" : "cucumber"
+        },
+        {
+            "name" : "Eggplant",
+            "image" : "eggplant"
+        },
+        {
+            "name" : "Finocchio",
+            "image" : "finocchio"
+        },
+        {
+            "name" : "Kale",
+            "image" : "kale"
+        },
+        {
+            "name" : "Kohlrabi",
+            "image" : "kohlrabi"
+        },
+        {
+            "name" : "Leek",
+            "image" : "leek"
+        },
+        {
+            "name" : "Lettuce",
+            "image" : "lettuce"
+        },
+        {
+            "name" : "Olive",
+            "image" : "olive"
+        },
+        {
+            "name" : "Onion",
+            "image" : "onion"
+        },
+        {
+            "name" : "Paprika",
+            "image" : "paprika"
+        },
+        {
+            "name" : "Peas",
+            "image" : "peas"
+        },
+        {
+            "name" : "Potato",
+            "image" : "potato"
+        },
+        {
+            "name" : "Pumpkin",
+            "image" : "pumpkin"
+        },
+        {
+            "name" : "Radish",
+            "image" : "radish"
+        },
+        {
+            "name" : "Scallions",
+            "image" : "scallions"
+        },
+        {
+            "name" : "Soy",
+            "image" : "soy"
+        },
+        {
+            "name" : "Spinach",
+            "image" : "spinach"
+        },
+        {
+            "name" : "Squash",
+            "image" : "squash"
+        },
+        {
+            "name" : "Sweet Potato",
+            "image" : "sweet-potato"
+        },
+        {
+            "name" : "Tomato",
+            "image" : "tomato"
+        },
+        {
+            "name" : "Zucchini",
+            "image" : "zucchini"
+        }
+      ]
+    },
+    {
+      "section" : "Spices",
+      "products" : [
+          {
+              "name" : "Basil",
+              "image" : "basil"
+          },
+          {
+              "name" : "Black Pepper",
+              "image" : "black-pepper"
+          },
+          {
+              "name" : "Black Seasame Seeds",
+              "image" : "black-seasame-seeds"
+          },
+          {
+              "name" : "Cinnamon Sticks",
+              "image" : "cinnamon-sticks"
+          },
+          {
+              "name" : "Cloves",
+              "image" : "cloves"
+          },
+          {
+              "name" : "Curry",
+              "image" : "curry"
+          },
+          {
+              "name" : "Garlic",
+              "image" : "garlic"
+          },
+          {
+              "name" : "Ginger",
+              "image" : "ginger"
+          },
+          {
+              "name" : "Granulated Garlic",
+              "image" : "granulated-garlic"
+          },
+          {
+              "name" : "Ketchup",
+              "image" : "ketchup"
+          },
+          {
+              "name" : "Mint",
+              "image" : "mint"
+          },
+          {
+              "name" : "Mustard",
+              "image" : "mustard"
+          },
+          {
+              "name" : "Olive Oil",
+              "image" : "olive-oil"
+          },
+          {
+              "name" : "Rice Vinegar",
+              "image" : "rice-vinegar"
+          },
+          {
+              "name" : "Salt",
+              "image" : "salt"
+          },
+          {
+              "name" : "Sesame Oil",
+              "image" : "sesame-oil"
+          },
+          {
+              "name" : "Smoked Paprica",
+              "image" : "smoked-paprica"
+          },
+          {
+              "name" : "Soy Sauce",
+              "image" : "soy-sauce"
+          },
+          {
+              "name" : "Sugar",
+              "image" : "sugar"
+          },
+          {
+              "name" : "Sunflower Oil",
+              "image" : "sunflower-oil"
+          },
+          {
+              "name" : "Thyme",
+              "image" : "thyme"
+          }
+      ]
+    },
+    {
+      "section" : "Drinks",
+      "products" : [
+          {
+              "name" : "Coconut milk",
+              "image" : "coconut-milk"
+          },
+          {
+              "name" : "Coffie",
+              "image" : "coffee-capsule"
+          },
+          {
+              "name" : "Cola",
+              "image" : "cola"
+          },
+          {
+              "name" : "Green Tea",
+              "image" : "green-tea"
+          },
+          {
+              "name" : "Lemonade",
+              "image" : "lemonade"
+          },
+          {
+              "name" : "Oat Milk",
+              "image" : "oat-milk"
+          },
+          {
+              "name" : "Orange Juice",
+              "image" : "orange-juice"
+          },
+          {
+              "name" : "Tea",
+              "image" : "tea"
+          },
+          {
+              "name" : "Wine",
+              "image" : "wine"
+          }
+      ]
+    },
+    {
+      "section" : "Pastry",
+      "products" : [
+          {
+              "name" : "Birthday Cake",
+              "image" : "birthday-cake"
+          },
+          {
+              "name" : "Cake",
+              "image" : "cake"
+          },
+          {
+              "name" : "Cinnamon Roll",
+              "image" : "cinnamon-roll"
+          },
+          {
+              "name" : "Cookies",
+              "image" : "cookies"
+          },
+          {
+              "name" : "Croissant",
+              "image" : "croisant"
+          },
+          {
+              "name" : "Cupcake",
+              "image" : "cupcake"
+          },
+          {
+              "name" : "Doughnut",
+              "image" : "doughnut"
+          },
+          {
+              "name" : "Macaron",
+              "image" : "macaron"
+          },
+          {
+              "name" : "Pie",
+              "image" : "pie"
+          },
+          {
+              "name" : "Samosa",
+              "image" : "samosa"
+          }
+      ]
+    },
+    {
+      "section" : "Dairy",
+      "products" : [
+          {
+              "name" : "Butter",
+              "image" : "butter"
+          },
+          {
+              "name" : "Egg",
+              "image" : "egg"
+          },
+          {
+              "name" : "Milk",
+              "image" : "milk"
+          },
+          {
+              "name" : "Mozzarella",
+              "image" : "mozzarella"
+          }
+      ]
+    },
+    {
+        "section" : "Desserts",
+        "products" : [
+            {
+                "name" : "Cheesecake",
+                "image" : "cherry-cheesecakse"
+            },
+            {
+                "name" : "White Chocolate",
+                "image" : "chocolate-bar-white-"
+            },
+            {
+                "name" : "Milk Chocolate",
+                "image" : "chocolate-bar"
+            },
+            {
+                "name" : "Gummy bear",
+                "image" : "gummy-bear"
+            },
+            {
+                "name" : "Ice Cream",
+                "image" : "ice-cream-cone"
+            },
+            {
+                "name" : "Jam",
+                "image" : "jam"
+            },
+            {
+                "name" : "Jelly",
+                "image" : "jelly"
+            },
+            {
+                "name" : "Sweets",
+                "image" : "sweets"
+            }
+        ]
+    },
+    {
+        "section" : "Bakery Products",
+        "products" : [
+            {
+                "name" : "Baguette",
+                "image" : "baguette"
+            },
+            {
+                "name" : "Bread",
+                "image" : "bread"
+            },
+            {
+                "name" : "Flour",
+                "image" : "flour"
+            },
+            {
+                "name" : "Oats",
+                "image" : "oats"
+            },
+            {
+                "name" : "Pretzel",
+                "image" : "pretzel"
+            },
+            {
+                "name" : "Sliced Bread",
+                "image" : "sliced-bread"
+            }
+        ]
+    },
+    {
+        "section" : "Meat",
+        "products" : [
+            {
+                "name" : "Bacon",
+                "image" : "bacon"
+            },
+            {
+                "name" : "Beef",
+                "image" : "beef"
+            },
+            {
+                "name" : "Jamon",
+                "image" : "jamon"
+            },
+            {
+                "name" : "Salami",
+                "image" : "salami"
+            },
+            {
+                "name" : "Sausages",
+                "image" : "sausages"
+            },
+            {
+                "name" : "Steak",
+                "image" : "steak"
+            }
+        ]
+    },
+    {
+        "section" : "Nuts",
+        "products" : [
+            {
+                "name" : "Brazil Nut",
+                "image" : "brazil-nut"
+            },
+            {
+                "name" : "Cashnew",
+                "image" : "cashnew"
+            },
+            {
+                "name" : "Hazelnut",
+                "image" : "hazelnut"
+            },
+            {
+                "name" : "Peanuts",
+                "image" : "peanuts"
+            },
+            {
+                "name" : "Pecan",
+                "image" : "pecan"
+            }
+        ]
+    },
+    {
+        "section" : "Seafood",
+        "products" : [
+            {
+                "name" : "Crab",
+                "image" : "crab"
+            },
+            {
+                "name" : "Fish",
+                "image" : "fish"
+            },
+            {
+                "name" : "Octopus",
+                "image" : "octopus"
+            },
+            {
+                "name" : "Prawn",
+                "image" : "prawn"
+            },
+            {
+                "name" : "Shellfish",
+                "image" : "sellfish"
+            }
+        ]
+    },
+    {
+        "section" : "Other",
+        "products" : [
+            {
+                "name" : "Almond Butter",
+                "image" : "almond-butter"
+            },
+            {
+                "name" : "Bread Crumbs",
+                "image" : "bread-crumbs"
+            },
+            {
+                "name" : "Chia Seeds",
+                "image" : "chia-seeds"
+            },
+            {
+                "name" : "Coconut",
+                "image" : "coconut"
+            },
+            {
+                "name" : "Gum",
+                "image" : "gum"
+            },
+            {
+                "name" : "Heinz Beans",
+                "image" : "heinz-beans"
+            },
+            {
+                "name" : "Honey",
+                "image" : "honey"
+            },
+            {
+                "name" : "Ice",
+                "image" : "ice"
+            },
+            {
+                "name" : "Maple Syrup",
+                "image" : "maple-syrup"
+            },
+            {
+                "name" : "Mushroom",
+                "image" : "mushroom"
+            },
+            {
+                "name" : "Peanut Butter",
+                "image" : "peanut-butter"
+            },
+            {
+                "name" : "Raisins",
+                "image" : "raisins"
+            },
+            {
+                "name" : "Rice",
+                "image" : "rice"
+            },
+            {
+                "name" : "Tofu",
+                "image" : "tofu"
+            },
+            {
+                "name" : "White Beans",
+                "image" : "white-beans"
+            }
+        ]
+    }
+]
