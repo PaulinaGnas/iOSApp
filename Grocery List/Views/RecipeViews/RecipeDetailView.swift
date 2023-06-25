@@ -10,10 +10,12 @@ import SwiftUI
 struct RecipeDetailView: View {
     @StateObject private var viewModel: RecipeDetailViewModel
     @FetchRequest var ingredients: FetchedResults<UserIngredient>
-    
+    @FetchRequest var recipe: FetchedResults<UserRecipe>
+
     init(filter: String) {
         _ingredients = FetchRequest<UserIngredient>(sortDescriptors: [], predicate: NSPredicate(format: "parentRecipe.recipeName == %@", filter))
         _viewModel = StateObject(wrappedValue: RecipeDetailViewModel(filter: filter))
+        _recipe = FetchRequest<UserRecipe>(sortDescriptors: [], predicate: NSPredicate(format: "recipeName == %@", filter))
     }
     
     var body: some View {
@@ -28,33 +30,42 @@ struct RecipeDetailView: View {
                             .padding(5)
                         
                         Group {
-                            Text(viewModel.recipe.unwrappedRecipeName)
+                            Text(recipe.first!.unwrappedRecipeName)
                                 .font(.system(.largeTitle, design: .serif))
                                 .fontWeight(.bold)
                                 .multilineTextAlignment(.center)
                                 .padding(.top, 10)
                             
-                            RatingView(rating: .constant(viewModel.recipe.unwrappedRating))
+                            RatingView(rating: .constant(recipe.first!.unwrappedRating))
                             
                             HStack(alignment: .center, spacing: 12) {
                                 HStack {
                                     Image(systemName: "person.2")
-                                    Text("Serves: \(viewModel.recipe.unwrappedServes)")
+                                    Text("Serves: \(recipe.first!.unwrappedServes)")
                                 }
                                 HStack {
                                     Image(systemName: "clock")
-                                    Text("Prep: \(viewModel.recipe.unwrappedPreparationTime)")
+                                    Text("Prep: \(recipe.first!.unwrappedPreparationTime)")
                                 }
                                 HStack {
                                     Image(systemName: "leaf")
-                                    Text("Ingreds: \(viewModel.recipe.unwrappedListOfIngredients.count)")
+                                    Text("Ingreds: \(recipe.first!.unwrappedListOfIngredients.count)")
                                 }
                             }
                             .font(.footnote)
-                            .foregroundColor(.gray)
+                            .foregroundColor(Color(UIColor(named: "fontColor")!))
                             
-                            Text("Ingredients")
-                                .modifier(TitleModifier())
+                            HStack {
+                                Text("Ingredients")
+                                    .modifier(TitleModifier())
+                                NavigationLink(destination: AddToCartView(ingredients: ingredients)) {
+                                    Image(systemName: "cart.badge.plus")
+                                        .resizable()
+                                        .scaledToFit()
+                                        .frame(width: 30, height: 30)
+                                        .foregroundColor(Color(UIColor(named: "fontColor")!))
+                                }
+                            }
                             
                             if ingredients.count != 0 {
                                 VStack(alignment: .leading, spacing: 5) {
@@ -62,6 +73,7 @@ struct RecipeDetailView: View {
                                         VStack(alignment: .leading, spacing: 5) {
                                             Text("\(ing.unwrappedQuantity) \(ing.unwrappedUnit) \(ing.unwrappedIngredientName)")
                                                 .font(.footnote)
+                                         
                                             Divider()
                                         }
                                     }
@@ -71,11 +83,11 @@ struct RecipeDetailView: View {
                             }
                             Text("Instructions")
                                 .modifier(TitleModifier())
-                            Text(viewModel.recipe.unwrappedInstructions)
+                            Text(recipe.first!.unwrappedInstructions)
                         
                             Text("Notes")
                                 .modifier(TitleModifier())
-                            Text(viewModel.recipe.unwrappedNote)
+                            Text(recipe.first!.unwrappedNote)
                         } //: GROUP
                         .padding(.horizontal, 16)
                         .padding(.vertical, 12)
@@ -85,18 +97,13 @@ struct RecipeDetailView: View {
                                 viewModel.image = Image("avocado-toast-bacon")
                             }
                         }
-                        
                     } //: VSTACK
                     .toolbar {
                         ToolbarItem(placement: .navigationBarTrailing) {
-                            NavigationLink(destination: UpdateRecipeView(filter: viewModel.recipe.unwrappedRecipeName, filterId: viewModel.recipe.id!)) {
+                            NavigationLink(destination: UpdateRecipeView(filter: recipe.first!.unwrappedRecipeName, filterId: recipe.first!.id!)) {
                                 Text("Edit recipe")
                             }
                         }
-                    }
-                    
-                    .background {
-                        Color.white
                     }
                     .padding(.bottom, 10)
                 } //: SCROLLVIEW
@@ -108,9 +115,3 @@ struct RecipeDetailView: View {
         } //: NAVIGATIONSTACK
     }
 }
-
-//struct RecipeDetailView_Previews: PreviewProvider {
-//    static var previews: some View {
-//        RecipeDetailView()
-//    }
-//}

@@ -8,7 +8,7 @@
 
 import Foundation
 import CoreData
-import UIKit
+//import UIKit
 
 
 extension Theme {
@@ -17,21 +17,15 @@ extension Theme {
         return NSFetchRequest<Theme>(entityName: "Theme")
     }
 
-    @NSManaged public var colorTopAlpha: Float
-    @NSManaged public var colorTopRed: Float
-    @NSManaged public var colorTopGreen: Float
-    @NSManaged public var colorTopBlue: Float
-    @NSManaged public var colorBottomAlpha: Float
-    @NSManaged public var colorBottomRed: Float
-    @NSManaged public var colorBottomGreen: Float
-    @NSManaged public var colorBottomBlue: Float
+    @NSManaged public var topColor: String?
+    @NSManaged public var bottomColor: String?
     
-    public var topColor: UIColor {
-        return UIColor(red: CGFloat(colorTopRed), green: CGFloat(colorTopGreen), blue: CGFloat(colorTopBlue), alpha: CGFloat(colorTopAlpha))
+    public var unwrappedTopColor: String {
+        return topColor ?? "pink5"
     }
     
-    public var bottomColor: UIColor {
-        return UIColor(red: CGFloat(colorBottomRed), green: CGFloat(colorBottomGreen), blue: CGFloat(colorBottomBlue), alpha: CGFloat(colorBottomAlpha))
+    public var unwrappedBottomColor: String {
+        return bottomColor ?? "blue3"
     }
 }
 

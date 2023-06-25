@@ -11,11 +11,23 @@ struct IngredientsView: View {
     @StateObject private var viewModel: IngredientsViewModel
     var recipe: UserRecipe
     @FetchRequest var ingreds: FetchedResults<UserIngredient>
-    
+    @Environment(\.managedObjectContext) var viewContext
+
     init(recipe: UserRecipe) {
         self.recipe = recipe
         _ingreds = FetchRequest<UserIngredient>(sortDescriptors: [], predicate: NSPredicate(format: "parentRecipe.id == %@", recipe.id! as CVarArg))
         _viewModel = StateObject(wrappedValue: IngredientsViewModel(filter: recipe.unwrappedRecipeName))
+    }
+    
+    func deleteIngredient(offsets: IndexSet) {
+        offsets.map { ingreds[$0] }.forEach(viewContext.delete)
+        
+        do {
+            try viewContext.save()
+        } catch {
+            let nsError = error as NSError
+            fatalError("Unresolved error \(nsError), \(nsError.userInfo)")
+        }
     }
     
     var body: some View {
@@ -33,7 +45,7 @@ struct IngredientsView: View {
                                 Text("\(ing.unwrappedQuantity) \(ing.unwrappedUnit)  \(ing.unwrappedIngredientName)")
                             }
                         }
-                        .onDelete(perform: viewModel.deleteIngredient)
+                        .onDelete(perform: deleteIngredient)
                     }
                     .scrollContentBackground(.hidden)
                     .padding(0)
@@ -57,19 +69,9 @@ struct IngredientsView: View {
                     }
                 }
             } //: ZSTACK
-            //.modifier(RoundedBackgroundModifier())
             .background {
                 BackgroundView()
             }
         }
     }
 }
-
-//struct AddIngredientsView_Previews: PreviewProvider {
-//    static var previews: some View {
-//        Group {
-//            //IngredientsView()
-//            AddIngredientView()
-//        }
-//    }
-//}

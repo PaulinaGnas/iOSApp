@@ -38,7 +38,7 @@ class AddNewItemViewModel: ObservableObject {
         choosenProduct = product
     }
     
-    func admitProduct(product: SingleProduct, productsCategory: Category) {
+    func admitProduct(product: SingleProduct) {
         choosenProduct = product
     }
 }

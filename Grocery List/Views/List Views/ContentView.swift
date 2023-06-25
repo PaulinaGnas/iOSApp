@@ -8,6 +8,7 @@
 import SwiftUI
 
 struct ContentView: View {
+    @Environment(\.colorScheme) var colorScheme
     var body: some View {
         TabView {
             ListsView()
@@ -22,7 +23,7 @@ struct ContentView: View {
                     Text("Recipes")
                 }
         }
-        .tint(.white)
+        .tint(Color(UIColor(named: "fontColor")!))
     }
 }
 

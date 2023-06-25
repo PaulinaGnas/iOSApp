@@ -28,20 +28,7 @@ class PersistenceController: ObservableObject {
     static var preview: PersistenceController = {
         let result = PersistenceController(inMemory: true)
         let viewContext = result.container.viewContext
-        
-        
-        
-        for _ in 0..<4 {
-            let product1 = ShopProduct(context: viewContext)
-            product1.name = "Lemon"
-            product1.amount = "5"
-            product1.choosenUnit = "kg"
-            product1.completion = false
-            product1.id = UUID()
-            product1.originList = ShopList(context: viewContext)
-            product1.originList?.listName = "List of fruits"
-            product1.originList?.checkProduct = Int16(0)
-        }
+
         do {
             try viewContext.save()
         } catch {

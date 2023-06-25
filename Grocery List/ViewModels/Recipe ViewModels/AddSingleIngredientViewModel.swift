@@ -24,8 +24,8 @@ class AddSingleIngredientViewModel: ObservableObject {
     
     func addItemToRecipe() {
         let newIngred = UserIngredient(context: moc)
-        newIngred.name = product.name
         newIngred.id = UUID()
+        newIngred.name = product.name
         newIngred.parentRecipe = recipe
         newIngred.quantity = quantity
         newIngred.unit = unit

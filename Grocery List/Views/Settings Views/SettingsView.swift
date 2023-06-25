@@ -8,8 +8,31 @@
 import SwiftUI
 
 struct SettingsView: View {
+    @AppStorage("DarkAppearance") var darkAppearance = false
+    
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        Form {
+            Section {
+                NavigationLink {
+                   BackgroundSettingsView()
+                } label: {
+                    Text("Background theme")
+                }
+                
+                Toggle("Dark Appearance", isOn: $darkAppearance)
+
+            } header: {
+                Text("Theme settings")
+            }
+            
+            Section {
+                ForEach(formStaticData) { row in
+                    FormStaticRowView(staticRow: row)
+                }
+            } header: {
+                Text("About the application")
+            }
+        }
     }
 }
 

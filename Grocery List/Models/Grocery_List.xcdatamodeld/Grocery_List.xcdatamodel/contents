@@ -16,14 +16,8 @@
         <relationship name="originList" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="ShopList" inverseName="products" inverseEntity="ShopList"/>
     </entity>
     <entity name="Theme" representedClassName="Theme" syncable="YES">
-        <attribute name="colorBottomAlpha" optional="YES" attributeType="Float" defaultValueString="0.0" usesScalarValueType="YES"/>
-        <attribute name="colorBottomBlue" optional="YES" attributeType="Float" defaultValueString="0.0" usesScalarValueType="YES"/>
-        <attribute name="colorBottomGreen" optional="YES" attributeType="Float" defaultValueString="0.0" usesScalarValueType="YES"/>
-        <attribute name="colorBottomRed" optional="YES" attributeType="Float" defaultValueString="0.0" usesScalarValueType="YES"/>
-        <attribute name="colorTopAlpha" optional="YES" attributeType="Float" defaultValueString="0.0" usesScalarValueType="YES"/>
-        <attribute name="colorTopBlue" optional="YES" attributeType="Float" defaultValueString="0.0" usesScalarValueType="YES"/>
-        <attribute name="colorTopGreen" optional="YES" attributeType="Float" defaultValueString="0.0" usesScalarValueType="YES"/>
-        <attribute name="colorTopRed" optional="YES" attributeType="Float" defaultValueString="0.0" usesScalarValueType="YES"/>
+        <attribute name="bottomColor" optional="YES" attributeType="String"/>
+        <attribute name="topColor" optional="YES" attributeType="String"/>
     </entity>
     <entity name="UserIngredient" representedClassName="UserIngredient" syncable="YES">
         <attribute name="id" optional="YES" attributeType="UUID" usesScalarValueType="NO"/>

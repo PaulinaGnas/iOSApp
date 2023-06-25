@@ -25,6 +25,8 @@ struct LineView: View {
                     .foregroundColor(.gray)
                 }
             }
+            .frame(width: 0, height: 0)
+            .hidden()
         }
     }
 }

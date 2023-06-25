@@ -25,6 +25,7 @@ struct AddSingleIngredientView: View {
                 VStack {
                     Text(viewModel.product.name)
                         .fontWeight(.semibold)
+                        .foregroundColor(.black)
                     
                     HStack {
                         TextField("Quantity", text: $viewModel.quantity)
@@ -36,10 +37,12 @@ struct AddSingleIngredientView: View {
                             .padding()
                             .background(Color(UIColor.tertiarySystemFill))
                             .cornerRadius(9)
+                            .foregroundColor(.black)
                         
                         Picker("Choose unit", selection: $viewModel.unit) {
                             ForEach(viewModel.units, id: \.self) {
                                 Text($0)
+                                    .foregroundColor(.black)
                             }
                         }
                         .pickerStyle(.inline)
@@ -63,10 +66,3 @@ struct AddSingleIngredientView: View {
         }
     }
 }
-
-
-//struct AddSingleIngredientView_Previews: PreviewProvider {
-//    static var previews: some View {
-//        AddSingleIngredientView()
-//    }
-//}

@@ -8,12 +8,22 @@
 import SwiftUI
 
 struct ListsView: View {
+    @Environment(\.managedObjectContext) private var viewContext
     @StateObject private var viewModel = ListsViewModel()
     @FetchRequest(sortDescriptors: [SortDescriptor(\.listName)]) private var listy: FetchedResults<ShopList>
     @State var showAlert = false
-    
-    var dupa = "Duapa"
  
+    func deleteKupas(offsets: IndexSet) {
+        offsets.map { listy[$0] }.forEach(viewContext.delete)
+        
+        do {
+            try viewContext.save()
+        } catch {
+            let nsError = error as NSError
+            fatalError("Unresolved error \(nsError), \(nsError.userInfo)")
+        }
+    }
+    
     var body: some View {
         NavigationStack {
             ZStack {
@@ -27,19 +37,18 @@ struct ListsView: View {
                         
                         EditButton()
                             .padding(10)
-                            .foregroundColor(.white)
+                            .foregroundColor(Color(UIColor(named: "fontColor") ?? .black))
                             .background {
                                 Capsule()
-                                    .stroke(.white, lineWidth: 2)
+                                    .stroke((Color(UIColor(named: "fontColor") ?? .black)), lineWidth: 2)
                             }
-                        Button {
-                            
-                        } label: {
+                        
+                        NavigationLink(destination: SettingsView()) {
                             Image(systemName: "paintbrush")
                                 .resizable()
                                 .scaledToFit()
                                 .frame(width: 30, height: 30)
-                                .foregroundColor(.white)
+                                .foregroundColor(Color(UIColor(named: "fontColor") ?? .black))
                         }
                     }
                     .padding()
@@ -62,7 +71,6 @@ struct ListsView: View {
                         .padding()
                         .background {
                             BackgroundButtonView().clipShape(Capsule())
-                                
                         }
                     }
                     Spacer()
@@ -71,9 +79,10 @@ struct ListsView: View {
                             ForEach(listy) { list in
                                 LineView(list: list)
                             }
-                            .onDelete(perform: viewModel.deleteKupas)
+                            .onDelete(perform: deleteKupas)
                         }
                         .scrollContentBackground(.hidden)
+                        .shadow(radius: 9)
                     } else {
                         Text("Add list")
                         Spacer()

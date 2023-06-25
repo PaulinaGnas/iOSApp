@@ -41,11 +41,3 @@ struct CreateNewRecipeView: View {
         }
     }
 }
-
-
-
-//struct CreateNewRecipeView_Previews: PreviewProvider {
-//    static var previews: some View {
-//        CreateNewRecipeView(showAlert: .constant(false))
-//    }
-//}

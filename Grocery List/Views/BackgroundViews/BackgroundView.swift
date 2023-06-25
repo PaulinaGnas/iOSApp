@@ -11,8 +11,9 @@ struct BackgroundView: View {
     @FetchRequest(sortDescriptors: []) private var theme: FetchedResults<Theme>
     
     var body: some View {
-        LinearGradient(gradient: Gradient(colors: [Color(uiColor: theme.first?.topColor ?? .purple), Color(uiColor: theme.first?.bottomColor ?? .red)]), startPoint: .top, endPoint: .bottom)
+        LinearGradient(gradient: Gradient(colors: [Color(UIColor(named: theme.first?.topColor ?? "purple8")!), Color(UIColor(named: theme.first?.bottomColor ?? "orange7")!)]), startPoint: .topLeading, endPoint: .bottomTrailing)
             .edgesIgnoringSafeArea(.all)
+        
     }
 }
 

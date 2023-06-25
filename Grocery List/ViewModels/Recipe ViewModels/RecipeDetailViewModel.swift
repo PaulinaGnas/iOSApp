@@ -16,6 +16,7 @@ class RecipeDetailViewModel: ObservableObject {
     @Published var recipe = UserRecipe()
     @Published var image: Image?
     @Published var inputImage = UIImage(systemName: "xmark")
+    @Published var addToCart = false
     
     init(filter: String) {
         fetchData(filter)

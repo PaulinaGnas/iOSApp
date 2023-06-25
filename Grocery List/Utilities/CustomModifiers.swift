@@ -14,6 +14,7 @@ struct TitleModifier: ViewModifier {
             .font(.system(.title, design: .serif))
             .fontWeight(.bold)
             .padding(8)
+            .foregroundColor(Color(UIColor(named: "fontColor")!))
     }
 }
 
@@ -34,7 +35,7 @@ struct SquareButtonModifier: ViewModifier {
 struct RoundedBackgroundModifier: ViewModifier {
     func body(content: Content) -> some View {
         content
-            .background(.white)
+            .background(Color(UIColor(named: "BackgroundColor")!))
             .cornerRadius(12)
             .shadow(color: Color.gray, radius: 8, x: 0, y: 0)
     }

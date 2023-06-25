@@ -8,6 +8,7 @@
 import SwiftUI
 
 struct ListDetailView: View {
+    @Environment(\.managedObjectContext) private var viewContext
     @StateObject private var viewModel: ListDetailViewModel
     @State var showUpdateItemView = false
     
@@ -31,13 +32,14 @@ struct ListDetailView: View {
                         Spacer()
                         EditButton()
                             .padding(10)
-                            .foregroundColor(.white)
+                            .foregroundColor(Color(UIColor(named: "fontColor") ?? .black))
                             .background {
                                 Capsule()
-                                    .stroke(.white, lineWidth: 2)
+                                    .stroke(Color(UIColor(named: "fontColor") ?? .black), lineWidth: 2)
                             }
                     }
                     .padding()
+                    
                     if !products.isEmpty {
                         List {
                             ForEach(products) { product in
@@ -72,9 +74,10 @@ struct ListDetailView: View {
                                     }
                                 }
                             }
-                            .onDelete(perform: viewModel.deleteItems)
+                            .onDelete(perform: deleteItems)
                         }
                         .scrollContentBackground(.hidden)
+                        .shadow(radius: 9)
                     } else {
                         Text("")
                         Spacer()
@@ -110,12 +113,20 @@ struct ListDetailView: View {
             .background(BackgroundView())
         }
     }
+    
+    func deleteItems(offsets: IndexSet) {
+        for index in offsets {
+            let item = products[index]
+            if item.completion {
+                products.first?.originList?.checkProduct -= 1
+            }
+            viewContext.delete(item)
+        }
+        do {
+            try viewContext.save()
+        } catch {
+            let nsError = error as NSError
+            fatalError("Unresolved error \(nsError), \(nsError.userInfo)")
+        }
+    }
 }
-
-
-
-//struct ListDetailView_Previews: PreviewProvider {
-//    static var previews: some View {
-//        ListDetailView()
-//    }
-//}

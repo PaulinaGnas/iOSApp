@@ -29,7 +29,6 @@ struct RatingView: View {
                     .onTapGesture {
                         rating = number
                     }
-                
             }
         }
     }

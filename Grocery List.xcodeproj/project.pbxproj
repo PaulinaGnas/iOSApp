@@ -7,12 +7,18 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		350449F12A3892FB00C775D6 /* AddToCartView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 350449F02A3892FB00C775D6 /* AddToCartView.swift */; };
+		350449F32A3A171100C775D6 /* BackgroundSettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 350449F22A3A171100C775D6 /* BackgroundSettingsView.swift */; };
+		350449F52A3CEE0A00C775D6 /* BackgroundSettingsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 350449F42A3CEE0A00C775D6 /* BackgroundSettingsViewModel.swift */; };
+		350449F92A3CEE6600C775D6 /* ColorsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 350449F82A3CEE6600C775D6 /* ColorsView.swift */; };
 		359A286F2A2E08BA00A47FD5 /* CustomModifiers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 359A286E2A2E08BA00A47FD5 /* CustomModifiers.swift */; };
 		359A28722A2E0D2100A47FD5 /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 359A28712A2E0D2100A47FD5 /* SettingsView.swift */; };
 		359A28752A2E109E00A47FD5 /* Theme+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 359A28732A2E109E00A47FD5 /* Theme+CoreDataClass.swift */; };
 		359A28762A2E109E00A47FD5 /* Theme+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 359A28742A2E109E00A47FD5 /* Theme+CoreDataProperties.swift */; };
 		359A28782A2E135800A47FD5 /* BackgroundView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 359A28772A2E135800A47FD5 /* BackgroundView.swift */; };
 		359A287A2A2E14F700A47FD5 /* BackgroundButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 359A28792A2E14F700A47FD5 /* BackgroundButtonView.swift */; };
+		359B95F82A483795005EE8C8 /* FormStaticRowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 359B95F72A483795005EE8C8 /* FormStaticRowView.swift */; };
+		359B95FA2A483EED005EE8C8 /* FormStatic.swift in Sources */ = {isa = PBXBuildFile; fileRef = 359B95F92A483EED005EE8C8 /* FormStatic.swift */; };
 		35A7419829FA9DD60069CDAD /* Grocery_ListApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35A7419729FA9DD60069CDAD /* Grocery_ListApp.swift */; };
 		35A7419A29FA9DD60069CDAD /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35A7419929FA9DD60069CDAD /* ContentView.swift */; };
 		35A7419C29FA9DD80069CDAD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 35A7419B29FA9DD80069CDAD /* Assets.xcassets */; };
@@ -64,12 +70,18 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		350449F02A3892FB00C775D6 /* AddToCartView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddToCartView.swift; sourceTree = "<group>"; };
+		350449F22A3A171100C775D6 /* BackgroundSettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BackgroundSettingsView.swift; sourceTree = "<group>"; };
+		350449F42A3CEE0A00C775D6 /* BackgroundSettingsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BackgroundSettingsViewModel.swift; sourceTree = "<group>"; };
+		350449F82A3CEE6600C775D6 /* ColorsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorsView.swift; sourceTree = "<group>"; };
 		359A286E2A2E08BA00A47FD5 /* CustomModifiers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomModifiers.swift; sourceTree = "<group>"; };
 		359A28712A2E0D2100A47FD5 /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
 		359A28732A2E109E00A47FD5 /* Theme+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Theme+CoreDataClass.swift"; sourceTree = "<group>"; };
 		359A28742A2E109E00A47FD5 /* Theme+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Theme+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		359A28772A2E135800A47FD5 /* BackgroundView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BackgroundView.swift; sourceTree = "<group>"; };
 		359A28792A2E14F700A47FD5 /* BackgroundButtonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BackgroundButtonView.swift; sourceTree = "<group>"; };
+		359B95F72A483795005EE8C8 /* FormStaticRowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FormStaticRowView.swift; sourceTree = "<group>"; };
+		359B95F92A483EED005EE8C8 /* FormStatic.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FormStatic.swift; sourceTree = "<group>"; };
 		35A7419429FA9DD60069CDAD /* Grocery List.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Grocery List.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		35A7419729FA9DD60069CDAD /* Grocery_ListApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Grocery_ListApp.swift; sourceTree = "<group>"; };
 		35A7419929FA9DD60069CDAD /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -136,6 +148,9 @@
 			isa = PBXGroup;
 			children = (
 				359A28712A2E0D2100A47FD5 /* SettingsView.swift */,
+				350449F22A3A171100C775D6 /* BackgroundSettingsView.swift */,
+				350449F82A3CEE6600C775D6 /* ColorsView.swift */,
+				359B95F72A483795005EE8C8 /* FormStaticRowView.swift */,
 			);
 			path = "Settings Views";
 			sourceTree = "<group>";
@@ -210,6 +225,7 @@
 		35A741C829FAF8040069CDAD /* ViewModels */ = {
 			isa = PBXGroup;
 			children = (
+				350449F42A3CEE0A00C775D6 /* BackgroundSettingsViewModel.swift */,
 				35D676C72A16204500593796 /* List ViewModels */,
 				35D676C82A16205700593796 /* Recipe ViewModels */,
 			);
@@ -223,6 +239,7 @@
 				35A741D029FC31070069CDAD /* shopItems.json */,
 				35A741A029FA9DD80069CDAD /* Persistence.swift */,
 				35A741A229FA9DD80069CDAD /* Grocery_List.xcdatamodeld */,
+				359B95F92A483EED005EE8C8 /* FormStatic.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -267,6 +284,7 @@
 				35D676B52A15159E00593796 /* IngredientsView.swift */,
 				35E511712A26002D00A9A013 /* AddIngredientView.swift */,
 				35E511752A262C1100A9A013 /* AddSingleIngredientView.swift */,
+				350449F02A3892FB00C775D6 /* AddToCartView.swift */,
 			);
 			path = RecipeViews;
 			sourceTree = "<group>";
@@ -384,6 +402,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				359B95F82A483795005EE8C8 /* FormStaticRowView.swift in Sources */,
 				35A741A129FA9DD80069CDAD /* Persistence.swift in Sources */,
 				35D676AD2A14FE6600593796 /* RecipeDetailView.swift in Sources */,
 				35A741CF29FC30940069CDAD /* ProductsModel.swift in Sources */,
@@ -391,6 +410,7 @@
 				35D676A42A0A912500593796 /* LineView.swift in Sources */,
 				35D676B32A15089000593796 /* CreateNewRecipeView.swift in Sources */,
 				35A741D329FC31450069CDAD /* BundeExtension.swift in Sources */,
+				350449F12A3892FB00C775D6 /* AddToCartView.swift in Sources */,
 				35A741B729FACFBB0069CDAD /* BlankView.swift in Sources */,
 				35A741DA29FC75FF0069CDAD /* AddNewItemView-ViewModel.swift in Sources */,
 				35A741B129FACB960069CDAD /* ListDetailView.swift in Sources */,
@@ -403,6 +423,7 @@
 				35E189B82A1629C400DBC010 /* UpdateRecipeViewModel.swift in Sources */,
 				35A741C129FAE31D0069CDAD /* ShopProduct+CoreDataProperties.swift in Sources */,
 				35A741B329FACC980069CDAD /* AddNewListView.swift in Sources */,
+				350449F32A3A171100C775D6 /* BackgroundSettingsView.swift in Sources */,
 				35A741D629FC3B050069CDAD /* AdvancedItemView.swift in Sources */,
 				35A7419829FA9DD60069CDAD /* Grocery_ListApp.swift in Sources */,
 				35E511722A26002D00A9A013 /* AddIngredientView.swift in Sources */,
@@ -411,6 +432,7 @@
 				35A741CD29FC30140069CDAD /* AddNewItemView.swift in Sources */,
 				35D676A82A0A9C6700593796 /* UpdateItemView.swift in Sources */,
 				35D676C32A1524BC00593796 /* UserRecipe+CoreDataClass.swift in Sources */,
+				350449F52A3CEE0A00C775D6 /* BackgroundSettingsViewModel.swift in Sources */,
 				35A741D829FC75DA0069CDAD /* ListDetailView-ViewModel.swift in Sources */,
 				35D676AB2A14FBEE00593796 /* SingleRecipeView.swift in Sources */,
 				35D676CC2A1620AE00593796 /* SingleRecipeView-ViewModel.swift in Sources */,
@@ -419,8 +441,10 @@
 				35E189BC2A179DD700DBC010 /* RecipeDetailViewModel.swift in Sources */,
 				35E189E12A17BEC500DBC010 /* ImagePicker.swift in Sources */,
 				35E511702A25FFFD00A9A013 /* AddSingleIngredientViewModel.swift in Sources */,
+				359B95FA2A483EED005EE8C8 /* FormStatic.swift in Sources */,
 				35A741BF29FAE31D0069CDAD /* ShopList+CoreDataProperties.swift in Sources */,
 				35D676B62A15159E00593796 /* IngredientsView.swift in Sources */,
+				350449F92A3CEE6600C775D6 /* ColorsView.swift in Sources */,
 				35D676C52A1524BC00593796 /* UserIngredient+CoreDataClass.swift in Sources */,
 				35A741AD29FAA9F60069CDAD /* ListsView.swift in Sources */,
 				35E189B62A16299D00DBC010 /* UpdateRecipeView.swift in Sources */,
@@ -569,8 +593,8 @@
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UIStatusBarStyle = "";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -598,8 +622,8 @@
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UIStatusBarStyle = "";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

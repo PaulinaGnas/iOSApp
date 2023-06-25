@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct AddNewItemView: View {
-    
+    @Environment(\.dismiss) private var dismiss
     @StateObject private var viewModel: AddNewItemViewModel
     @State var showAddItemView = false
     
@@ -26,7 +26,8 @@ struct AddNewItemView: View {
                                 Section {
                                     ForEach(category.products) { singleProduct in
                                         Button {
-                                            viewModel.admitProduct(product: singleProduct, productsCategory: category)
+                                           // viewModel.admitProduct(product: singleProduct)
+                                            viewModel.choosenProduct = singleProduct
                                             showAddItemView = true
                                         } label: {
                                             HStack {
@@ -35,7 +36,7 @@ struct AddNewItemView: View {
                                                     .frame(width: 25, height: 25)
                                                 
                                                 Text(singleProduct.name)
-                                                    .tint(Color.black)
+                                                    .tint(Color(UIColor(named: "fontColor")!))
                                             }
                                         }
                                     }
@@ -46,7 +47,7 @@ struct AddNewItemView: View {
                         } else {
                             ForEach(viewModel.searchResults) { result in
                                 Button {
-                                    viewModel.createProductCategory(product: result)
+                                    viewModel.choosenProduct = result
                                     showAddItemView = true
                                 } label: {
                                     HStack {
@@ -55,12 +56,13 @@ struct AddNewItemView: View {
                                             .frame(width: 25, height: 25)
                                         
                                         Text(result.name)
-                                            .tint(Color.black)
+                                            .tint(Color(UIColor(named: "fontColor")!))
                                     }
                                 }
                             }
                         }
                     }
+                    .shadow(radius: 9)
                     .scrollContentBackground(.hidden)
                     .navigationBarTitle("Search")
                     .searchable(text: $viewModel.searchText, placement: .navigationBarDrawer(displayMode: .always))
@@ -80,12 +82,3 @@ struct AddNewItemView: View {
         }
     }
 }
-
-
-
-
-//struct AddNewItemView_Previews: PreviewProvider {
-//    static var previews: some View {
-//        AddNewItemView(, lisr: <#ShopList#>)
-//    }
-//}

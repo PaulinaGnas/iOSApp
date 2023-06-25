@@ -24,6 +24,7 @@ struct AdvancedItemView: View {
                 VStack {
                     Text(viewModel.product.name)
                         .fontWeight(.semibold)
+                        .foregroundColor(.black)
                     HStack {
                         TextField("Amount", text: $viewModel.amount)
                             .frame(height: 1)
@@ -34,10 +35,12 @@ struct AdvancedItemView: View {
                             .padding()
                             .background(Color(UIColor.tertiarySystemFill))
                             .cornerRadius(9)
+                            .foregroundColor(.black)
                         
                         Picker("Choose unit", selection: $viewModel.unit) {
                             ForEach(viewModel.units, id: \.self) {
                                 Text($0)
+                                    .foregroundColor(.black)
                             }
                         }
                         .pickerStyle(.inline)
@@ -63,11 +66,3 @@ struct AdvancedItemView: View {
         }
     }
 }
-
-
-
-//struct AdvancedItemView_Previews: PreviewProvider {
-//    static var previews: some View {
-//        AdvancedItemView(showAddItemView: .constant(false), product: SingleProduct(name: "", image: ""), category: Category(section: "", products: [SingleProduct(name: "", image: "")]))
-//    }
-//}

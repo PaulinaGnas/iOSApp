@@ -34,7 +34,7 @@ struct AddIngredientView: View {
                                                     .frame(width: 25, height: 25)
                                                 
                                                 Text(product.name)
-                                                    .tint(Color.black)
+                                                    .tint(Color(UIColor(named: "fontColor")!))
                                             }
                                         }
                                     }
@@ -54,7 +54,7 @@ struct AddIngredientView: View {
                                             .frame(width: 25, height: 25)
                                         
                                         Text(result.name)
-                                            .tint(Color.black)
+                                            .tint(Color(UIColor(named: "fontColor")!))
                                     }
                                 }
                             }
@@ -73,15 +73,8 @@ struct AddIngredientView: View {
                 }
             }
             .background {
-                Color(.purple)
-                    .ignoresSafeArea(.all)
+                BackgroundView()
             }
         }
     }
 }
-
-//struct AddSingleIngredientView_Previews: PreviewProvider {
-//    static var previews: some View {
-//        AddIngredientView()
-//    }
-//}

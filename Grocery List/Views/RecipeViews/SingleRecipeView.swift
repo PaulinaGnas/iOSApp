@@ -27,7 +27,7 @@ struct SingleRecipeView: View {
                     .font(.system(.title, design: .serif))
                     .fontWeight(.bold)
                     .lineLimit(1)
-                    .foregroundColor(.black)
+                    .foregroundColor(Color(UIColor(named: "fontColor")!))
                 
                 RatingView(rating: .constant(recipe.first!.unwrappedRating))
                 
@@ -35,6 +35,7 @@ struct SingleRecipeView: View {
                     HStack {
                         Image(systemName: "person.2")
                         Text("Serves: \(recipe.first?.unwrappedServes ?? 0)")
+                            
                     }
                     HStack {
                         Image(systemName: "clock")
@@ -46,7 +47,7 @@ struct SingleRecipeView: View {
                     }
                 }
                 .font(.footnote)
-                .foregroundColor(.gray)
+                .foregroundColor(Color(UIColor(named: "fontColor")!))
             }
             .padding()
             .padding(.bottom, 12)

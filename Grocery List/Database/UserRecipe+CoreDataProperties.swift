@@ -9,7 +9,6 @@
 import Foundation
 import CoreData
 
-
 extension UserRecipe {
 
     @nonobjc public class func fetchRequest() -> NSFetchRequest<UserRecipe> {

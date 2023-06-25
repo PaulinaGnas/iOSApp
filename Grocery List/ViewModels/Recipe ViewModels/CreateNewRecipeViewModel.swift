@@ -37,7 +37,7 @@ class CreateNewRecipeViewModel: ObservableObject {
     }
     
     func saveNewRecipeToCore() {
-        if !existingRecipes.contains(where: { $0.unwrappedRecipeName == name }) {
+        if !existingRecipes.contains(where: { $0.unwrappedRecipeName == name }) || name != "" {
             let newRecipe = UserRecipe(context: viewContext)
             newRecipe.recipeName = name
             newRecipe.id = UUID()

@@ -37,5 +37,16 @@ class ListsViewModel: ObservableObject {
             fatalError("Unresolved error \(nsError), \(nsError.userInfo)")
         }
     }
+    
+    func dupa(item: ShopList) {
+            viewContext.delete(item)
+        do {
+            try viewContext.save()
+        } catch {
+            let nsError = error as NSError
+            fatalError("Unresolved error \(nsError), \(nsError.userInfo)")
+
+        }
+    }
 }
 
