@@ -9,12 +9,14 @@ import Foundation
 import SwiftUI
 
 struct TitleModifier: ViewModifier {
+    @FetchRequest(sortDescriptors: []) private var theme: FetchedResults<Theme>
+    
     func body(content: Content) -> some View {
         content
             .font(.system(.title, design: .serif))
             .fontWeight(.bold)
             .padding(8)
-            .foregroundColor(Color(UIColor(named: "fontColor")!))
+            .foregroundColor(Color(UIColor(named: theme.first?.topColor ?? "purple8")!))
     }
 }
 

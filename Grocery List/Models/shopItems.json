@@ -254,7 +254,7 @@
           },
           {
               "name" : "Black Seasame Seeds",
-              "image" : "black-seasame-seeds"
+              "image" : "black-sesame-seeds"
           },
           {
               "name" : "Cinnamon Sticks",
@@ -310,7 +310,7 @@
           },
           {
               "name" : "Smoked Paprica",
-              "image" : "smoked-paprica"
+              "image" : "smoked-paprika"
           },
           {
               "name" : "Soy Sauce",
@@ -392,7 +392,7 @@
           },
           {
               "name" : "Croissant",
-              "image" : "croisant"
+              "image" : "croissant"
           },
           {
               "name" : "Cupcake",
@@ -442,7 +442,7 @@
         "products" : [
             {
                 "name" : "Cheesecake",
-                "image" : "cherry-cheesecakse"
+                "image" : "cherry-cheesecake"
             },
             {
                 "name" : "White Chocolate",
@@ -540,8 +540,8 @@
                 "image" : "brazil-nut"
             },
             {
-                "name" : "Cashnew",
-                "image" : "cashnew"
+                "name" : "Cashew",
+                "image" : "cashew"
             },
             {
                 "name" : "Hazelnut",
@@ -578,7 +578,7 @@
             },
             {
                 "name" : "Shellfish",
-                "image" : "sellfish"
+                "image" : "shellfish"
             }
         ]
     },
